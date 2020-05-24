@@ -1,0 +1,22 @@
+body{
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+}
+
+.landingPage{
+  margin: 0px auto;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+/* @media only screen and (max-width: 600px) {
+  body {
+  }
+} */
+
+@media only screen and (min-width: 768px) {
+  .landingPage{
+    padding-left: 270px;
+    padding-right: 300px;
+  }
+}

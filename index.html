@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-93891365-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-93891365-13');
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JioMart Delivery Finder</title>
+  <link rel="shortcut icon" href="files/img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="files/css/bootstrap.min.css">
+  <link rel="stylesheet" href="files/css/custom.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand " href="/">JioMart Delivery Finder</a>
+  </nav>
+
+  <div class="container ">
+    <div class="row" style="margin-top: 20px;text-align: right;">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <a href="https://twitter.com/TheSumitBanik" class="twitter-follow-button" data-show-count="false"></a>
+        <script src="files/js/widgets.js"></script>
+      </div>
+    </div>
+    <div class="row landingPage">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <p>Enter your pincode:</p>
+        <input name="pincode" title="Enter your Pincode" id="pincode" class="form-control" required='true' maxlength="6"
+          oninput="javascript:
+            if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);
+            document.querySelector('#message').style.visibility='hidden';
+            document.querySelector('.location-details').style.visibility='hidden'
+
+            " type="number"><br>
+        <button type="submit" title="Find Details" class="btn btn-primary btn-block"
+          onclick="find(document.querySelector('#pincode'))">Find</button>
+        <br>
+        <p id="message"></p>
+
+        <div class="location-details table-responsive" style="visibility: hidden;">
+          <table class="table">
+            <thead class="thead-light">
+              <h6 style="font-size: 17px;font-weight:600;">Location Details</h6>
+              <tr>
+                <th>City</th>
+                <th>State Name</th>
+                <th>State Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="city_name">&nbsp;</td>
+                <td id="state_name">&nbsp;</td>
+                <td id="state_code">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="files/js/jquery.js"></script>
+  <script src="files/js/popper.min.js"></script>
+  <script src="files/js/bootstrap.min.js"></script>
+  <script src="files/js/app.js"></script>
+</body>
+
+</html>
